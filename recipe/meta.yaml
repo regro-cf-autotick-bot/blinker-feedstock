@@ -1,35 +1,36 @@
 {% set version = "1.4" %}
 
 package:
-    name: blinker
-    version: {{ version }}
+  name: blinker
+  version: {{ version }}
 
 source:
-    fn: blinker-{{ version }}.tar.gz
-    url: https://pypi.python.org/packages/source/b/blinker/blinker-{{ version }}.tar.gz
-    md5: 8b3722381f83c2813c52de3016b68d33
+  url: https://pypi.io/packages/source/b/blinker/blinker-{{ version }}.tar.gz
+  sha256: 471aee25f3992bd325afa3772f1063dbdbbca947a041b8b89466dc00d606f8b6
 
 build:
-    number: 0
-    script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 0
+  noarch: python
+  script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
-    build:
-        - python
-        - setuptools
-    run:
-        - python
+  build:
+    - python
+    - setuptools
+  run:
+    - python
 
 test:
-    imports:
-        - blinker
+  imports:
+    - blinker
 
 about:
-    home: http://pythonhosted.org/blinker/
-    license: MIT
-    summary: Fast, simple object-to-object and broadcast signaling
+  home: http://pythonhosted.org/blinker/
+  license: MIT
+  license_file: LICENSE
+  summary: Fast, simple object-to-object and broadcast signaling
 
 extra:
-    recipe-maintainers:
-        - ocefpaf
-        - frol
+  recipe-maintainers:
+    - ocefpaf
+    - frol
