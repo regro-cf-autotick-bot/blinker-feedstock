@@ -1,4 +1,4 @@
-{% set version = "1.4" %}
+{% set version = "1.5" %}
 
 package:
   name: blinker
@@ -6,31 +6,36 @@ package:
 
 source:
   url: https://pypi.io/packages/source/b/blinker/blinker-{{ version }}.tar.gz
-  sha256: 471aee25f3992bd325afa3772f1063dbdbbca947a041b8b89466dc00d606f8b6
+  sha256: 923e5e2f69c155f2cc42dafbbd70e16e3fde24d2d4aa2ab72fbe386238892462
 
 build:
-  number: 1
+  number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python =2.7|>=3.5
     - pip
   run:
-    - python
+    - python =2.7|>=3.5
 
 test:
   imports:
     - blinker
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
-  home: http://pythonhosted.org/blinker/
+  home: https://github.com/pallets-eco/blinker
   license: MIT
-  license_file: LICENSE
+  license_file: LICENSE.rst
   summary: Fast, simple object-to-object and broadcast signaling
 
 extra:
   recipe-maintainers:
     - ocefpaf
     - frol
+    - synapticarbors
