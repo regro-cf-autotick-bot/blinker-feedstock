@@ -31,7 +31,7 @@ test:
 about:
   home: https://github.com/pallets-eco/blinker
   license: MIT
-  license_file: LICENSE
+  license_file: LICENSE.rst
   summary: Fast, simple object-to-object and broadcast signaling
 
 extra:
