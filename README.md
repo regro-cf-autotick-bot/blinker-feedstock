@@ -1,11 +1,11 @@
-About blinker
-=============
+About blinker-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/blinker-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/pallets-eco/blinker
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/blinker-feedstock/blob/main/LICENSE.txt)
 
 Summary: Fast, simple object-to-object and broadcast signaling
 
