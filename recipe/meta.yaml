@@ -19,7 +19,7 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - typing_extensions
+    - typing_extensions >=4.2
 
 test:
   imports:
