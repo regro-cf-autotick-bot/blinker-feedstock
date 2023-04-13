@@ -1,4 +1,4 @@
-{% set version = "1.6.1" %}
+{% set version = "1.6.2" %}
 
 package:
   name: blinker
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/b/blinker/blinker-{{ version }}.tar.gz
-  sha256: 2ddfa223483ce8f24ecd2723e0e27cd4388ef19bef1d76b09a3dae93033db231
+  sha256: 4afd3de66ef3a9f8067559fb7a1cbe555c17dcbe15971b05d1b625c3e7abe213
 
 build:
   number: 0
@@ -19,7 +19,6 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - typing_extensions >=4.2
 
 test:
   imports:
