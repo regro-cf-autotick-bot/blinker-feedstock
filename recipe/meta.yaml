@@ -1,21 +1,23 @@
-{% set version = "1.6.2" %}
+{% set name = "blinker" %}
+{% set version = "1.6.3" %}
 
 package:
-  name: blinker
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/b/blinker/blinker-{{ version }}.tar.gz
-  sha256: 4afd3de66ef3a9f8067559fb7a1cbe555c17dcbe15971b05d1b625c3e7abe213
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/blinker-{{ version }}.tar.gz
+  sha256: 152090d27c1c5c722ee7e48504b02d76502811ce02e1523553b4cf8c8b3d3a8d
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
     - python >=3.7
+    - flit-core <4
     - pip
   run:
     - python >=3.7
