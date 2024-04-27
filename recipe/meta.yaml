@@ -1,5 +1,5 @@
 {% set name = "blinker" %}
-{% set version = "1.7.0" %}
+{% set version = "1.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/blinker-{{ version }}.tar.gz
-  sha256: e6820ff6fa4e4d1d8e2747c2283749c3f547e4fee112b98555cdcdae32996182
+  sha256: a07839c713d30141433647247db269dd896895b0bf56d2362f663496feae562b
 
 build:
   noarch: python
@@ -33,7 +33,7 @@ test:
 about:
   home: https://github.com/pallets-eco/blinker
   license: MIT
-  license_file: LICENSE.rst
+  license_file: LICENSE.txt
   summary: Fast, simple object-to-object and broadcast signaling
 
 extra:
