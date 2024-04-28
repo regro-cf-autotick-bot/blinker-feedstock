@@ -1,5 +1,5 @@
 {% set name = "blinker" %}
-{% set version = "1.8.0" %}
+{% set version = "1.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/blinker-{{ version }}.tar.gz
-  sha256: a07839c713d30141433647247db269dd896895b0bf56d2362f663496feae562b
+  sha256: da44ec748222dcd0105ef975eed946da197d5bdf8bafb6aa92f5bc89da63fa25
 
 build:
   noarch: python
